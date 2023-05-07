@@ -1,0 +1,6 @@
+sudo apt autoremove && sudo apt autoclean df -h
+sudo du -xh --max-depth=1 /var
+sudo du -xh --max-depth=1 /var/log
+sudo find /var/log -mtime +30 -type f -delete
+sudo lsof -nP | grep '(deleted)'
+sudo apt install lsof
